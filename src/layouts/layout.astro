@@ -1,0 +1,70 @@
+---
+import "../styles/global.css";
+const { title, description } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.svg" />
+    <meta name="description" content={description} />
+    <meta name="twitter:image" content="/placeholder-social.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@thecodecreep" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/placeholder-social.jpg" />
+    <title>{title}</title>
+    <meta name="theme-color" content="#000000" />
+  </head>
+  <body class="h-screen bg-black">
+    <main>
+      <div
+        class="align-left flex h-screen w-full flex-col items-center justify-center p-4 text-creep"
+      >
+        <div
+          class="align-left flex flex-row gap-4 px-4 py-4 text-left md:py-0 md:text-left"
+        >
+          <a href="/about">
+            <h3 class="text-xl hover:text-white">About</h3>
+          </a>
+          <a href="/blog">
+            <h3 class="text-xl hover:text-white">Blog</h3>
+          </a>
+          <a href="/projects">
+            <h3 class="text-xl hover:text-white">Projects</h3>
+          </a>
+          <a href="/linktree">
+            <h3 class="text-xl hover:text-white md:hidden">Linktree</h3>
+          </a>
+        </div>
+        <article>
+          <slot />
+        </article>
+        <div class="absolute bottom-0 flex h-16 gap-6 p-4 text-creep">
+          <a
+            href="https://youtube.com/thecodecreep"
+            class="flex gap-2 align-baseline"
+          >
+            <span class="hidden hover:text-white md:block">YouTube</span>
+          </a>
+
+          <a
+            href="https://twitter.com/thecodecreep"
+            class="flex gap-2 align-baseline"
+          >
+            <span class="hidden hover:text-white md:block">Twitter</span>
+          </a>
+
+          <a
+            href="https://twitch.tv/thecodecreep"
+            class="flex gap-2 align-baseline"
+          >
+            <span class="hidden hover:text-white md:block">Twitch</span>
+          </a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
