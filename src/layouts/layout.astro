@@ -26,17 +26,17 @@ const { title, description } = Astro.props;
         <div
           class="align-left flex flex-row gap-4 px-4 py-4 text-left md:py-0 md:text-left"
         >
-          <a href="/about">
-            <h3 class="text-xl hover:text-white">About</h3>
+          <a href="/about" aria-label="learn more about codecreep" class="text-xl hover:text-white">
+            About
           </a>
-          <a href="/blog">
-            <h3 class="text-xl hover:text-white">Blog</h3>
+          <a href="/blog" aria-label="visit codecreeps blog" class="text-xl hover:text-white">
+            Blog
           </a>
-          <a href="/projects">
-            <h3 class="text-xl hover:text-white">Projects</h3>
+          <a href="/projects" aria-label="see what codecreep has bee working on" class="text-xl hover:text-white">
+            Projects
           </a>
-          <a href="/linktree">
-            <h3 class="text-xl hover:text-white md:hidden">Linktree</h3>
+          <a href="/linktree" aria-label="codecreeps social links and more" class="text-xl hover:text-white">
+            Linktree
           </a>
         </div>
         <article>
@@ -45,23 +45,26 @@ const { title, description } = Astro.props;
         <div class="absolute bottom-0 flex h-16 gap-6 p-4 text-creep">
           <a
             href="https://youtube.com/thecodecreep"
-            class="flex gap-2 align-baseline"
+            class="flex gap-2 align-baseline text-xl hover:text-white"
+            aria-label="visit codecreeps YouTube page"
           >
-            <span class="hidden hover:text-white md:block">YouTube</span>
+            Youtube
           </a>
 
           <a
             href="https://twitter.com/thecodecreep"
-            class="flex gap-2 align-baseline"
+            class="flex gap-2 align-baseline text-xl hover:text-white"
+            aria-label="visit codecreeps Twitter feed"
           >
-            <span class="hidden hover:text-white md:block">Twitter</span>
+            Twitter
           </a>
 
           <a
             href="https://twitch.tv/thecodecreep"
-            class="flex gap-2 align-baseline"
+            class="flex gap-2 align-baseline text-xl hover:text-white"
+            aria-label="visit codecreeps Twitch stream"
           >
-            <span class="hidden hover:text-white md:block">Twitch</span>
+            Twitch
           </a>
         </div>
       </div>
