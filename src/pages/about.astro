@@ -1,52 +1,26 @@
 ---
 import "../styles/global.css";
-const siteTitle = "CodeCreep - About";
+import Layout from "../layouts/layout.astro";
+const title = "CodeCreep - About";
 const description =
   "CodeCreep is the creator of the Creep multiverse. Software Developer. Creator. Media Agency";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/favicon.svg" />
-    <meta name="description" content={description} />
-    <meta name="twitter:image" content="/placeholder-social.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:creator" content="@thecodecreep" />
-    <meta property="og:title" content={siteTitle} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content="/placeholder-social.jpg" />
-    <title>{siteTitle}</title>
-    <meta name="theme-color" content="#000000" />
-  </head>
-  <body class="h-screen bg-black">
-    <main>
-      <div
-        class="flex h-screen w-full items-center justify-center p-4 align-middle text-creep"
-      >
-        about
-
-        <div class="absolute bottom-0 flex h-16 gap-6 p-4 text-creep">
-          <a
-            href="https://youtube.com/@t3dotgg"
-            class="flex gap-2 align-baseline"
-          >
-            <span class="hidden md:block">YouTube</span>
-          </a>
-
-          <a
-            href="https://twitter.com/t3dotgg"
-            class="flex gap-2 align-baseline"
-          >
-            <span class="hidden md:block">Twitter</span>
-          </a>
-
-          <a href="https://twitch.tv/theo" class="flex gap-2 align-baseline">
-            <span class="hidden md:block">Twitch</span>
-          </a>
-        </div>
-      </div>
-    </main>
-  </body>
-</html>
+<Layout title={title} description={description}>
+  <article class="prose dark:prose-invert">
+    <h1>About</h1>
+    <p>
+      Hello! My name is Matt. I am a software developer who is still pretty new
+      to the game. The idea behind CodeCreep is to have a space where I can
+      learn new things and document my journey and progression as a developer.
+    </p>
+    <p>
+      You can probably tell that this site is very much in it's early phase and
+      should still be considered as under construction.
+    </p>
+    <p>
+      If you have any questions or suggestions please get in touch with me as I
+      would love to hear what you think!
+    </p>
+  </article>
+</Layout>

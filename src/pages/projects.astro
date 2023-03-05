@@ -1,52 +1,20 @@
 ---
 import "../styles/global.css";
-const siteTitle = "CodeCreep - Projects";
+import Layout from "../layouts/layout.astro";
+const title = "CodeCreep - Projects";
 const description =
-  "CodeCreep is the creator of the Creep multiverse. Software Developer. Creator. Media Agency";
+  "Looking for inspiration? Take a look at some projects that I have worked on.";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/favicon.svg" />
-    <meta name="description" content={description} />
-    <meta name="twitter:image" content="/placeholder-social.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:creator" content="@thecodecreep" />
-    <meta property="og:title" content={siteTitle} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content="/placeholder-social.jpg" />
-    <title>{siteTitle}</title>
-    <meta name="theme-color" content="#000000" />
-  </head>
-  <body class="h-screen bg-black">
-    <main>
-      <div
-        class="flex h-screen w-full items-center justify-center p-4 align-middle text-creep"
-      >
-        projects
-
-        <div class="absolute bottom-0 flex h-16 gap-6 p-4 text-creep">
-          <a
-            href="https://youtube.com/@t3dotgg"
-            class="flex gap-2 align-baseline"
-          >
-            <span class="hidden md:block">YouTube</span>
-          </a>
-
-          <a
-            href="https://twitter.com/t3dotgg"
-            class="flex gap-2 align-baseline"
-          >
-            <span class="hidden md:block">Twitter</span>
-          </a>
-
-          <a href="https://twitch.tv/theo" class="flex gap-2 align-baseline">
-            <span class="hidden md:block">Twitch</span>
-          </a>
-        </div>
-      </div>
-    </main>
-  </body>
-</html>
+<Layout title={title} description={description}>
+  <article class="prose dark:prose-invert">
+    <h1>Projects</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, ex eaque. Odio eos dolores illo voluptas quis! Cumque, quod libero minima quas magni officia soluta aut nemo doloribus sapiente culpa.
+      Itaque voluptate porro magni doloremque tenetur. Odio, eaque quasi! Ullam vel iste similique dolores odio velit mollitia autem officiis architecto omnis ipsa ducimus excepturi harum, eligendi sunt debitis. Ea, quam?
+      Error, quaerat. Quo perspiciatis asperiores porro voluptatem, sed amet ab consequatur minus officia hic sequi ex numquam sunt veritatis deleniti. Eveniet, hic! Esse laborum assumenda id dolorem odio sunt optio!
+      Perspiciatis, officiis quos nihil eaque impedit optio perferendis eius facilis a quae inventore libero necessitatibus consequuntur quidem quo error sunt delectus? Nam enim non voluptatibus esse? Laborum nesciunt deserunt eum.
+      Minus, itaque? Temporibus a molestias sunt recusandae sed dolorum quam in deleniti assumenda fuga, mollitia, iste aperiam, est vel ab ea repellat numquam omnis nihil itaque officia placeat alias dolorem!
+    </p>
+  </article>
+</Layout>

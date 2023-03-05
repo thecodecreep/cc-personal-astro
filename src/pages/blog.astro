@@ -1,52 +1,17 @@
 ---
 import "../styles/global.css";
-const siteTitle = "CodeCreep - Blog";
+import Layout from "../layouts/layout.astro";
+const title = "CodeCreep - Blog";
 const description =
-  "CodeCreep is the creator of the Creep multiverse. Software Developer. Creator. Media Agency";
+  "Interested in coding? Take a look. Tech articles. Reviews. Recommendations.";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/favicon.svg" />
-    <meta name="description" content={description} />
-    <meta name="twitter:image" content="/placeholder-social.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:creator" content="@thecodecreep" />
-    <meta property="og:title" content={siteTitle} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content="/placeholder-social.jpg" />
-    <title>{siteTitle}</title>
-    <meta name="theme-color" content="#000000" />
-  </head>
-  <body class="h-screen bg-black">
-    <main>
-      <div
-        class="flex h-screen w-full items-center justify-center p-4 align-middle text-creep"
-      >
-        blog
-
-        <div class="absolute bottom-0 flex h-16 gap-6 p-4 text-creep">
-          <a
-            href="https://youtube.com/@t3dotgg"
-            class="flex gap-2 align-baseline"
-          >
-            <span class="hidden md:block">YouTube</span>
-          </a>
-
-          <a
-            href="https://twitter.com/t3dotgg"
-            class="flex gap-2 align-baseline"
-          >
-            <span class="hidden md:block">Twitter</span>
-          </a>
-
-          <a href="https://twitch.tv/theo" class="flex gap-2 align-baseline">
-            <span class="hidden md:block">Twitch</span>
-          </a>
-        </div>
-      </div>
-    </main>
-  </body>
-</html>
+<Layout title={title} description={description}>
+  <article class="prose dark:prose-invert">
+    <h1>Blog</h1>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas labore totam tenetur eos vel debitis et! Est ipsam, voluptates cumque alias officia sunt consectetur. Tenetur praesentium enim aliquid rerum eaque.
+        Rerum, aliquid tempore et distinctio culpa reprehenderit nobis vitae id voluptatibus rem veritatis fugiat. Qui laborum, dolore enim itaque, nemo fuga eos atque, harum minus aliquam nam obcaecati impedit hic.
+    </p>
+  </article>
+</Layout>
