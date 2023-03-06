@@ -1,6 +1,9 @@
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue,svg}"],
   theme: {
+    fontFamily: {
+      alagard: ["alagard", "Helvetica", "Arial", "sans-serif"],
+    },
     extend: {
       colors: {
         transparent: "transparent",
