@@ -21,13 +21,13 @@ const { title, description } = Astro.props;
   <body class="h-screen bg-black">
     <main>
       <div
-        class="align-left flex h-screen w-full flex-col items-center justify-center p-4 text-creep">
+        class="flex h-screen w-full flex-col items-center p-4 text-creep">
         <a href="/" aria-label="return to the home page" class="hover:text-white">
           <h1 class="font-alagard text-5xl font-bold cursor-pointer">CodeCreep</h1>
         </a>
       
         <div
-          class="align-left flex flex-row gap-4 px-4 py-4 text-left md:py-0 md:text-left"
+          class="flex flex-row gap-4 px-4 py-4"
         >
           <a href="/about" aria-label="learn more about codecreep" class="text-xl hover:text-white">
             About
@@ -42,7 +42,7 @@ const { title, description } = Astro.props;
             Linktree
           </a>
         </div>
-        <article>
+        <article class="border-creep border-double border-4 p-4">
           <slot />
         </article>
         <div class="absolute bottom-0 flex h-16 gap-6 p-4 text-creep">
