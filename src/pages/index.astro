@@ -1,78 +1,13 @@
 ---
 import "../styles/global.css";
-const siteTitle = "CodeCreep";
+import Layout from "../layouts/layout.astro";
+const title = "CodeCreep";
 const description =
-  "CodeCreep is the creator of the Creep multiverse. Software Developer. Creator. Digital Agency";
+  "CodeCreep";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/favicon.svg" />
-    <meta name="description" content={description} />
-    <meta name="twitter:image" content="/placeholder-social.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:creator" content="@thecodecreep" />
-    <meta property="og:title" content={siteTitle} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content="/placeholder-social.jpg" />
-    <title>{siteTitle}</title>
-    <meta name="theme-color" content="#000000" />
-  </head>
-  <body class="h-screen bg-black">
-    <main>
-      <div
-        class="flex h-screen w-full items-center justify-center p-4 align-middle text-creep"
-      >
-        <div
-          class="grid grid-cols-1 grid-rows-2 md:grid-cols-[1fr_auto] md:grid-rows-[1fr]"
-        >
-          <div class="px-4 py-4 text-left md:py-0 md:text-left">
-            <h1 class="text-5xl font-bold font-alagard">CodeCreep</h1>
-            <a href="/about" class="text-xl hover:text-white">
-              About
-            </a>
-            <a href="/blog" class="text-xl hover:text-white">
-              Blog
-            </a>
-            <a href="/projects" class="text-xl hover:text-white">
-              Projects
-            </a>
-            <a href="/linktree" class="text-xl hover:text-white">
-              Linktree
-            </a>
-
-            <h2 class="mt-3 text-2xl font-bold">Support CodeCreep</h2>
-            <a href="https://patreon.com/t3dotgg" class="text-xl hover:text-white">
-              Ko-fi
-            </a>
-          </div>
-        </div>
-
-        <div class="absolute bottom-0 flex h-16 gap-6 p-4 text-creep">
-          <a
-            href="https://youtube.com/@thecodecreep"
-            class="flex gap-2 align-baseline"
-          >
-            <span class="hidden md:block">YouTube</span>
-          </a>
-
-          <a
-            href="https://twitter.com/@thecodecreep"
-            class="flex gap-2 align-baseline"
-          >
-            <span class="hidden md:block">Twitter</span>
-          </a>
-
-          <a
-            href="https://twitch.tv/@thecodecreep"
-            class="flex gap-2 align-baseline"
-          >
-            <span class="hidden md:block">Twitch</span>
-          </a>
-        </div>
-      </div>
-    </main>
-  </body>
-</html>
+<Layout title={title} description={description}>
+  <article class="prose dark:prose-invert">
+    <h1 class='font-alagard text-center'>...Who are you? Who sent you? You should not be here to see this. Not yet, at least. Please come back another day!</h1>
+  </article>
+</Layout>
