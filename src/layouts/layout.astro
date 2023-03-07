@@ -18,34 +18,53 @@ const { title, description } = Astro.props;
     <title>{title}</title>
     <meta name="theme-color" content="#000000" />
   </head>
-  <body class="h-screen bg-black">
+  <body class="h-screen w-full bg-dark">
     <main>
-      <div
-        class="flex h-screen w-full flex-col items-center p-4 text-creep">
-        <a href="/" aria-label="return to the home page" class="hover:text-white">
-          <h1 class="font-alagard text-5xl font-bold cursor-pointer">CodeCreep</h1>
-        </a>
-      
-        <div
-          class="flex flex-row gap-4 px-4 py-4"
+      <div class="flex h-screen w-full flex-col items-center p-4 text-creep">
+        <a
+          href="/"
+          aria-label="return to the home page"
+          class="hover:text-white"
         >
-          <a href="/about" aria-label="learn more about codecreep" class="text-xl hover:text-white">
+          <h1 class="cursor-pointer font-alagard text-5xl font-bold">
+            CodeCreep
+          </h1>
+        </a>
+
+        <div class="flex flex-row gap-4 px-4 py-4">
+          <a
+            href="/about"
+            aria-label="learn more about codecreep"
+            class="text-xl hover:text-white"
+          >
             About
           </a>
-          <a href="/blog" aria-label="visit codecreeps blog" class="text-xl hover:text-white">
+          <a
+            href="/blog"
+            aria-label="visit codecreeps blog"
+            class="text-xl hover:text-white"
+          >
             Blog
           </a>
-          <a href="/projects" aria-label="see what codecreep has bee working on" class="text-xl hover:text-white">
+          <a
+            href="/projects"
+            aria-label="see what codecreep has bee working on"
+            class="text-xl hover:text-white"
+          >
             Projects
           </a>
-          <a href="/linktree" aria-label="codecreeps social links and more" class="text-xl hover:text-white">
+          <a
+            href="https://linktr.ee/codecreep"
+            aria-label="codecreeps social links and more"
+            class="text-xl hover:text-white"
+          >
             Linktree
           </a>
         </div>
-        <article class="border-creep border-double border-4 p-4">
+        <article class="w-full bg-black p-4">
           <slot />
         </article>
-        <div class="absolute bottom-0 flex h-16 gap-6 p-4 text-creep">
+        <div class="fixed bottom-0 flex h-16 gap-6 p-4 text-creep">
           <a
             href="https://youtube.com/thecodecreep"
             class="flex gap-2 align-baseline text-xl hover:text-white"

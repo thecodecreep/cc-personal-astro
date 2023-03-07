@@ -1,0 +1,28 @@
+---
+export interface Props {
+  post: any;
+}
+const getSlugFromPath = (path: any): string => {
+  return path.split("/").at(-1).replace(".md", "");
+};
+const { post } = Astro.props;
+const url = "/blog/" + getSlugFromPath(post.file);
+---
+
+<a
+  href={url}
+  class="prose bg-dark p-5 drop-shadow-lg dark:prose-invert hover:bg-creep"
+>
+  <h1>{post.frontmatter.title}</h1>
+  <p>{post.frontmatter.description}</p>
+  <p>posted {post.frontmatter.date}</p>
+</a>
+
+<style>
+  .description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
