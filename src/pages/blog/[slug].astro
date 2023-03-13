@@ -21,15 +21,18 @@ const { post } = Astro.props;
 ---
 
 <Layout>
-  <article
-    class="prose prose-lg w-full max-w-none pb-10 dark:prose-invert lg:prose-xl"
-  >
-    <main>
+  <article>
+    <div class="mb-8 hover:text-white">
+      <a href="/blog">{"Back"}</a>
+    </div>
+    <main
+      class="prose prose-lg w-full max-w-none pb-10 dark:prose-invert lg:prose-xl"
+    >
       <post.Content />
     </main>
   </article>
-  <div class="pb-8">
-    <a href="/blog">{"<- Back to blog"}</a>
+  <div class="hover:text-white">
+    <a href="/blog">{"Back"}</a>
   </div>
 </Layout>
 
@@ -37,7 +40,7 @@ const { post } = Astro.props;
   .page {
     background-image: url("/images/bg-texture.png");
   }
-  a :global(a) {
+  /* a :global(a) {
     @apply my-1 appearance-none rounded-md py-2 text-blue-200 outline-none hover:underline focus:ring;
-  }
+  } */
 </style>

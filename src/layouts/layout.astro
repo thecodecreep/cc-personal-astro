@@ -18,15 +18,19 @@ const { title, description } = Astro.props;
     <title>{title}</title>
     <meta name="theme-color" content="#000000" />
   </head>
-  <body class="h-screen w-full bg-dark">
-    <main>
-      <div class="flex h-screen w-full flex-col items-center p-4 text-creep">
+  <body class="h-screen w-full bg-dark flex flex-col items-center">
+    <main class="max-w-[1000px] ">
+      <div
+        class="flex h-screen w-full flex-col items-center p-4 text-creep sm:text-left"
+      >
         <a
           href="/"
           aria-label="return to the home page"
           class="hover:text-white"
         >
-          <h1 class="cursor-pointer font-alagard text-5xl font-bold">
+          <h1
+            class="cursor-pointer font-alagard text-5xl font-bold sm:text-left"
+          >
             CodeCreep
           </h1>
         </a>
@@ -61,10 +65,10 @@ const { title, description } = Astro.props;
             Linktree
           </a>
         </div>
-        <article class="w-full bg-black p-4">
+        <article class="bg-black p-4">
           <slot />
         </article>
-        <div class="fixed bottom-0 flex h-16 gap-6 p-4 text-creep">
+        <div class="flex h-16 gap-6 p-4 text-creep">
           <a
             href="https://youtube.com/thecodecreep"
             class="flex gap-2 align-baseline text-xl hover:text-white"
