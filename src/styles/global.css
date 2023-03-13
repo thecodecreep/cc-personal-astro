@@ -4,6 +4,6 @@
 @layer base {
   @font-face {
     font-family: "alagard";
-    src: url("/public/fonts/alagard.ttf");
+    src: url("/fonts/alagard.ttf");
   }
 }

@@ -1,0 +1,39 @@
+---
+export interface Props {
+  post: any;
+}
+const getSlugFromPath = (path: any): string => {
+  return path.split("/").at(-1).replace(".md", "");
+};
+const { post } = Astro.props;
+const url = "/blog/" + getSlugFromPath(post.file);
+---
+
+<a href={url} class="w-full h-full bg-black p-4 hover:bg-dark drop-shadow-2xl">
+  <img
+    class="hidden md:block"
+    src="/placeholder-hero.jpg"
+    alt="blog article image"
+  />
+  <h1
+    class="text-limit pb-2 text-2xl capitalize underline md:text-1xl md:no-underline h-[70px]"
+  >
+    {post.frontmatter.title}
+  </h1>
+  <p class="text-limit text-gray-300">{post.frontmatter.description}</p>
+  <div class="flow-root pt-1">
+    <p class="float-left text-sm text-white md:text-md md:font-bold">
+      {post.frontmatter.date ? post.frontmatter.date : "6 days ago"}
+    </p>
+    <p class="float-right text-sm text-white md:text-md md:font-bold">by CodeCreep</p>
+  </div>
+</a>
+
+<style>
+  .text-limit {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>

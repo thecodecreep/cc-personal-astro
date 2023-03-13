@@ -1,0 +1,46 @@
+---
+import Layout from "../../layouts/layout.astro";
+import "../../styles/global.css";
+export async function getStaticPaths({ paginate, rss }: any) {
+  const getSlugFromPath = (path: any): string => {
+    return path.split("/").at(-1).replace(".md", "");
+  };
+  const allPosts = await Astro.glob("./posts/*.md");
+  const paths = allPosts.map((post) => {
+    const slug = getSlugFromPath(post.file);
+    return {
+      params: {
+        slug,
+      },
+      props: { post },
+    };
+  });
+  return paths;
+}
+const { post } = Astro.props;
+---
+
+<Layout>
+  <article>
+    <div class="mb-8 hover:text-white">
+      <a href="/blog">{"Back"}</a>
+    </div>
+    <main
+      class="prose prose-lg w-full max-w-none pb-10 dark:prose-invert lg:prose-xl"
+    >
+      <post.Content />
+    </main>
+  </article>
+  <div class="hover:text-white">
+    <a href="/blog">{"Back"}</a>
+  </div>
+</Layout>
+
+<style>
+  .page {
+    background-image: url("/images/bg-texture.png");
+  }
+  /* a :global(a) {
+    @apply my-1 appearance-none rounded-md py-2 text-blue-200 outline-none hover:underline focus:ring;
+  } */
+</style>
